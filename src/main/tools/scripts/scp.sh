@@ -1,0 +1,1 @@
+ scp -i Q:\SSH-KEY\ssh-key-2022-09-06.key E:\leotita\server\target\base-server-service-1.0.0-SNAPSHOT.tar.gz opc@168.138.40.181:/leotita/packages
