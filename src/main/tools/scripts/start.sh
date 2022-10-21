@@ -37,7 +37,7 @@ export projectVersion
 export timezone
 
 main() {
-  setsid java -jar -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xms512m -Xmx512m -Xss1024k -XX:SurvivorRatio=8 -XX:NewSize=512M -XX:+PrintGCDetails  -XX:+PrintGCDateStamps ./${projectName}-${projectVersion}.jar >/dev/null &
+  setsid java -jar  -Xms512m -Xmx512m -Xss1024k -Dspring.config.location=./../config/application.properties ./${projectName}-${projectVersion}.jar >/dev/null &
   echo "startup $projectName server success"
 }
 
@@ -46,7 +46,7 @@ export -f main
 
 if [[ ${user}x = "root"x ]]
 then
-    su streamax -c "main"
+    su opc -c "main"
 elif [[ ${user}x = "opc"x ]]
 then
     main

@@ -27,7 +27,7 @@
             <outputDirectory>config</outputDirectory>
         </fileSet>
         <fileSet>
-            <directory>src/main/scripts</directory>
+            <directory>src/main/tools/scripts</directory>
             <fileMode>0751</fileMode>
             <includes>
                 <include>*.sh</include>

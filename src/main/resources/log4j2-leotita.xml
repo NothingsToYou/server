@@ -4,16 +4,16 @@
 <!--monitorInterval：Log4j能够自动检测修改配置 文件和重新配置本身，设置间隔秒数-->
 <configuration status="WARN" monitorInterval="30">
     <Properties>
-        <property name="filename">${sys:filename}</property>
-        <property name="filepath">${sys:filepath}</property>
-        <property name="filesize">${sys:filesize}</property>
-        <property name="filecount">${sys:filecount}</property>
-        <property name="loglevel">${sys:loglevel}</property>
-        <property name="retentiontime">${sys:retentiontime}</property>
-        <property name="maxsize">${sys:maxsize}</property>
-        <property name="appname">${sys:appname:-N/A}</property>
+        <property name="filename">base-server-service</property>
+        <property name="filepath">/leotita/base/log</property>
+        <property name="filesize">50GB</property>
+        <property name="filecount">30</property>
+        <property name="loglevel">info</property>
+        <property name="retentiontime">30d</property>
+        <property name="maxsize">100MB</property>
+        <property name="appname">base-server-service</property>
         <property name="LOG_PATTERN"
-                  value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [${appname}] [%p] [%t] [%F:%L] [%X{_traceId}] %replace{%m}{(\r)*(\n)*(\%0a)*(\%0d)*}{}%n"/>
+                  value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [${appname}] [%p] [%t] [%F:%L]%n"/>
     </Properties>
 
     <!--先定义所有的appender-->
